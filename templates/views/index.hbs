@@ -3,13 +3,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
     {{>header}}
-    <h1>My name is {{name}}</h1>
+
+    <div class="main">
+
+      <div class="main-inner">
+        <img
+          src="https://img.freepik.com/premium-psd/sunny-rainy-cloudy-day-weather-forecast-icon-illustration_47987-10695.jpg"
+          alt="user"
+        />
+       <form>
+         <input type="text" placeholder="Enter location" />
+        <button>Submit</button>
+       </form>
+
+       <p class="para" id="message-one"> </p>
+       <p class="para" id="message-two"></p>
+       <p class="para" id="message-three"></p>
+     
+
+      </div>
+
+    </div>
+
     {{>footer}}
 
+    <script src="script.js"></script>
   </body>
 </html>

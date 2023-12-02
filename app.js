@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
+const getForecast = require("./utils/forecast");
+const getWeather = require("./utils/weather");
 
 const viewsPath = path.join(__dirname, "./templates/views");
 const partialsPath = path.join(__dirname, "./templates/partials");
@@ -19,15 +21,37 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/weather", (req, res) => {
+  if (!req.query.address)
+    return res.send({
+      error: "You must provide a address term",
+    });
+
+  getForecast(req.query.address, (lat, lon) => {
+    getWeather(lat, lon, (disc, temp, country, name) => {
+      res.send({
+        discription: disc,
+        temperature: temp,
+        country: country,
+        name: name,
+      });
+    });
+  });
+});
+
+
+
+
+
 app.get("/about", (req, res) => {
   res.render("about", {
-    about: "Software engineer at amazon",
+    about: "I am the about page",
   });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
-    help: "Premium courses and roadmap to become software engineer",
+    help: "I am the help page",
   });
 });
 
