@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: #cbd5e1;
+  background-color: #334155;
+  color: #6d28d9;
 }
 
 .header {
@@ -14,6 +15,8 @@ body {
   justify-content: space-around;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 50px;
+  background-color: #6d28d9;
+  color: whitesmoke;
 }
 
 .header ul {
@@ -24,7 +27,7 @@ body {
 }
 
 .header li a {
-  color: black;
+  color:whitesmoke;
   text-decoration: none;
 }
 
@@ -37,6 +40,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #6d28d9;
+  color: whitesmoke;
 }
 
 .about {
@@ -60,6 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:#4c1d95;
 }
 
 .main-inner {
@@ -93,5 +99,5 @@ form {
 .para {
   font-size: 20px;
   text-align: center;
-  color: #556080;
+  color:#7c3aed;
 }
